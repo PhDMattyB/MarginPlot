@@ -20,7 +20,7 @@ library(ggExtra)
 
 
 
-### Graphing using ggplot
+### Graphing with ggplot
 
 Next we need to make a ggplot object. we will use the free iris data frame to make 
 a scatterplot of Sepal length vs Petal length. 
