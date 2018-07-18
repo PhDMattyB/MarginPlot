@@ -1,20 +1,26 @@
 ---
 title: "Margin Plot"
-author: "Matt"
+author: "Matt Brachmann, PhD Candidate, University of Guelph"
 date: "July 18, 2018"
-output: html_document
+output: 
+  html_document:
+    theme: spacelab
+    toc: TRUE
+    toc_float: TRUE
 ---
-
+### Library installation
 1. Need to install libraries for the tidyverse, colouring, and to actually create
 the plot
 
-```{r warning=FALSE}
-##Need to fix these code chunks
+```{r warning=FALSE, message=FALSE}
 library(tidyverse)
 library(wesanderson)
 library(ggExtra)
 ```
 
+
+
+### Graphing using ggplot
 
 Next we need to make a ggplot object. we will use the free iris data frame to make 
 a scatterplot of Sepal length vs Petal length. 
@@ -23,11 +29,14 @@ a scatterplot of Sepal length vs Petal length.
 
 iris.graph = ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length))+
    geom_point(aes(col = Species))+
+   geom_smooth(method = 'lm', se = FALSE, col = 'black')+
    labs(x = 'Sepal Length', y = 'Petal Length')+
    theme_bw()+
    scale_color_manual(values = wes_palette('Darjeeling1', n = 6, type ='continuous'))+
    theme(legend.position = 'none')
 ```
+
+### Creating the actual marginal plot
 
 Now we need to use the ggMarginal function from the ggextra package to 
 actually add the histograms of the x and y variable distributions to the graph. 
