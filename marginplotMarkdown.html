@@ -233,8 +233,8 @@ div.tocify {
 library(wesanderson)
 library(ggExtra)</code></pre>
 </div>
-<div id="graphing-using-ggplot" class="section level3">
-<h3>Graphing using ggplot</h3>
+<div id="graphing-with-ggplot" class="section level3">
+<h3>Graphing with ggplot</h3>
 <p>Next we need to make a ggplot object. we will use the free iris data frame to make a scatterplot of Sepal length vs Petal length.</p>
 <pre class="r"><code>iris.graph = ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length))+
    geom_point(aes(col = Species))+
