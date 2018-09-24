@@ -1,7 +1,7 @@
 ---
 title: "Margin Plot"
 author: "Matt Brachmann, PhD Candidate, University of Guelph"
-date: "July 24, 2018"
+date: "Sept 21, 2018"
 output: 
   html_document:
     theme: spacelab
@@ -36,7 +36,7 @@ iris.graph = ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length))+
    theme(legend.position = 'none')
 ```
 
-### Creating the actual marginal plot
+### Creating the marginal plot
 
 Now we need to use the ggMarginal function from the ggextra package to 
 actually add the histograms of the x and y variable distributions to the graph. 
